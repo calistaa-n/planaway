@@ -2,11 +2,11 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from 'lucide-react';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const reviews = [
   {
@@ -45,11 +45,29 @@ const reviews = [
     helpful: 200,
     image: "/recent-reviews/bebek.png"
   },
-]
+] 
+  export function RecentReviews() {
+    const prevRef = useRef<HTMLButtonElement>(null);
+    const nextRef = useRef<HTMLButtonElement>(null);
+    const swiperRef = useRef<any>(null);
+    
+    useEffect(() => {
+      const swiper = swiperRef.current;
 
-export function RecentReviews() {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+    if (
+      swiper &&
+      typeof swiper.params.navigation === "object" &&
+      swiper.params.navigation !== null
+    ) {
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+
+      // Re-initialize navigation
+      swiper.navigation.destroy();
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+}, []);
 
   return (
     <section className="mt-20 relative">
@@ -86,6 +104,7 @@ export function RecentReviews() {
             nextEl: nextRef.current,
           }}
           onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
           }}

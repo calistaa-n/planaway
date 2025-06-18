@@ -1,6 +1,10 @@
 import { Star } from "lucide-react";
 
-const ratingData = {
+const ratingData: {
+  average: number;
+  totalReviews: string;
+  distribution: Record<number, number>;
+} = {
   average: 5,
   totalReviews: "48RB",
   distribution: {
