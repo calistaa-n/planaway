@@ -1,0 +1,18 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 1480px;
+}
+
+body{
+  background-color: #F9F6F1;
+  font-family: 'Manrope', sans-serif;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
