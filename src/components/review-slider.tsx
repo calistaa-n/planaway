@@ -50,7 +50,7 @@ const reviews = [
     const prevRef = useRef<HTMLButtonElement>(null);
     const nextRef = useRef<HTMLButtonElement>(null);
     const swiperRef = useRef<any>(null);
-    
+    ~
     useEffect(() => {
       const swiper = swiperRef.current;
 
