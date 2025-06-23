@@ -78,14 +78,14 @@ const reviews = [
           ref={prevRef}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-10 bg-[#6C7370] text-white hover:bg-black rounded-sm flex items-center justify-center shadow"
         >
-          🡄
+          <img src="/recent-reviews/arrow-l.png" alt="Arrow" />
         </button>
 
         <button
           ref={nextRef}
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-10 border-1 bg-[#6C7370] text-white hover:bg-black rounded-sm flex items-center justify-center shadow"
         >
-          🡆
+          <img src="/recent-reviews/arrow-r.png" alt="Arrow" />
         </button>
 
         <Swiper
@@ -107,7 +107,7 @@ const reviews = [
         >
           {/* Card Reviews */}
           {reviews.map((r, i) => (
-            <SwiperSlide key={i} className="min-h-[280px]">
+            <SwiperSlide key={i} className="h-[300px]">
               <Card className="bg-[#F2ECE3] h-full px-4 py-5 rounded-3xl flex flex-col w-full">
                 <CardContent className="p-0 flex flex-col justify-between h-full">
                   <div>

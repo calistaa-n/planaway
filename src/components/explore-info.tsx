@@ -71,12 +71,12 @@ export default function ExpInfo() {
           <h2 className="text-base sm:text-lg font-bold mb-2">Estimated Price</h2>
           <div className="flex flex-col gap-2 text-sm text-[#6C7370]">
             <div className="flex justify-between w-full max-w-xs">
-              <span>Adults (13+)</span>
-              <span>IDR 1,787,774 /adult</span>
+              <span>Adults(13+)</span>
+              <span className="whitespace-nowrap">IDR 1,787,774<span className="ml-1 text-xs">/adult</span></span>
             </div>
             <div className="flex justify-between w-full max-w-xs">
-              <span>Children (8-12)</span>
-              <span>IDR 893,887 /child</span>
+              <span>Children(8-12)</span>
+              <span className="tabular-nums whitespace-nowrap">IDR 893,887<span className="ml-1 text-xs">/child</span></span>
             </div>
           </div>
         </div>

@@ -16,13 +16,13 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#F9F6F1] z-50 shadow-sm px-4 py-3 flex items-center justify-between sm:px-6 lg:px-40">
+    <nav className="fixed top-0 left-0 right-0 bg-[#F9F6F1] z-50 shadow-sm px-4 py-3 flex items-center justify-between sm:px-6 lg:px-40 h-[60px] md:h-[72px]">
       {/* Logo */}
       <Link to="/">
         <img
           src="/logo_planaway.png"
           alt="Planaway Logo"
-          className="h-[30px] sm:h-[37px]"
+          className="h-[20px] md:h-[30px]"
         />
       </Link>
 
