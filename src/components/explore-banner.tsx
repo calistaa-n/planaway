@@ -2,7 +2,7 @@ import { Star, BadgeCheck, Share, Pencil, Heart } from "lucide-react";
 
 export function ExpBanner() {
   return (
-    <section className="mt-12 bg-[#faf8f4] min-h-screen">
+    <section className="mt-12 mb-8 bg-[#faf8f4]">
       {/* Breadcrumb */}
       <nav className="text-xs sm:text-sm text-[#6C7370] mb-6 sm:mb-9">
         Home &gt; Explore Activity &gt; Nature & Adventure &gt;
@@ -30,11 +30,11 @@ export function ExpBanner() {
 
         <div className="flex items-center gap-2 ml-auto w-full sm:w-auto justify-end">
           <Share className="w-5 h-5 text-[#6C7370] cursor-pointer hover:text-black" />
-          <button className="flex items-center gap-1 text-white bg-[#6C7370] hover:bg-black rounded-full py-1 px-2 sm:py-2 sm:px-4 text-xs sm:text-sm">
+          <button className="flex items-center gap-1 text-white bg-[#6C7370] hover:bg-black rounded-full py-1 px-2 sm:py-2 sm:px-4 text-sm sm:text-base">
             <Pencil className="w-4 h-4" />
             Add Review
           </button>
-          <button className="flex items-center gap-1 text-white bg-[#6C7370] hover:bg-black rounded-full py-1 px-2 sm:py-2 sm:px-4 text-xs sm:text-sm">
+          <button className="flex items-center gap-1 text-white bg-[#6C7370] hover:bg-black rounded-full py-1 px-2 sm:py-2 sm:px-4 text-sm sm:text-base">
             <Heart className="w-4 h-4" />
             Save
           </button>

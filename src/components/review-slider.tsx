@@ -50,24 +50,21 @@ const reviews = [
     const prevRef = useRef<HTMLButtonElement>(null);
     const nextRef = useRef<HTMLButtonElement>(null);
     const swiperRef = useRef<any>(null);
-    ~
-    useEffect(() => {
-      const swiper = swiperRef.current;
+    
+  useEffect(() => {
+    if (!swiperRef.current) return;
 
-    if (
-      swiper &&
-      typeof swiper.params.navigation === "object" &&
-      swiper.params.navigation !== null
-    ) {
-      swiper.params.navigation.prevEl = prevRef.current;
-      swiper.params.navigation.nextEl = nextRef.current;
+    const navigation = swiperRef.current.params?.navigation;
 
-      // Re-initialize navigation
-      swiper.navigation.destroy();
-      swiper.navigation.init();
-      swiper.navigation.update();
+    if (navigation && typeof navigation === "object") {
+      navigation.prevEl = prevRef.current;
+      navigation.nextEl = nextRef.current;
+
+      swiperRef.current.navigation.destroy();
+      swiperRef.current.navigation.init();
+      swiperRef.current.navigation.update();
     }
-}, []);
+  }, []);
 
   return (
     <section className="mt-20 relative">
@@ -105,18 +102,16 @@ const reviews = [
           }}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
           }}
-          className="!px-12"
+          className="px-4 sm:px-12"
         >
           {/* Card Reviews */}
           {reviews.map((r, i) => (
-            <SwiperSlide key={i} className="!h-[250px]">
-              <Card className="bg-[#F2ECE3] h-full px-4 py-5 rounded-3xl flex flex-col">
+            <SwiperSlide key={i} className="min-h-[280px]">
+              <Card className="bg-[#F2ECE3] h-full px-4 py-5 rounded-3xl flex flex-col w-full">
                 <CardContent className="p-0 flex flex-col justify-between h-full">
                   <div>
-                    <div className="flex items-center gap-4 mb-2">
+                    <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-4 mb-2">
                       <img
                         src={r.image}
                         alt={r.name}
@@ -124,7 +119,7 @@ const reviews = [
                         height={40}
                         className="rounded-full"
                       />
-                      <div>
+                      <div className="text-center sm:text-left">
                         <h3 className="font-semibold">{r.name}</h3>
                         <p className="text-sm text-muted-foreground">
                           {r.activity} | <span className="font-semibold">{r.location}</span>
@@ -143,7 +138,7 @@ const reviews = [
                       ))}
                     </div>
 
-                    <p className="text-sm mb-3 text-muted-foreground line-clamp-4">
+                    <p className="text-sm mb-3 text-muted-foreground line-clamp-3 sm:line-clamp-4">
                       {r.review}
                     </p>
                   </div>
@@ -155,7 +150,7 @@ const reviews = [
                 </CardContent>
               </Card>
             </SwiperSlide>
-          ))}
+          ))} 
         </Swiper>
       </div>
     </section>

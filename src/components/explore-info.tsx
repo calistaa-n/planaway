@@ -1,5 +1,6 @@
 'use client'
 import ExpRating from "../components/explore-rating";
+import FloatingButtons from "./floating-buttons";
 
 export default function ExpInfo() {
   return (
@@ -18,7 +19,7 @@ export default function ExpInfo() {
             <a
               key={tab.id}
               href={`#${tab.id}`}
-              className="w-full h-full flex items-center justify-center text-xs sm:text-sm md:text-base text-center rounded-2xl hover:bg-[#1D2B29] hover:text-white transition-colors"
+              className="w-full h-full flex items-center justify-center text-sm sm:text-base text-center rounded-2xl hover:bg-[#1D2B29] hover:text-white transition-colors"
             >
               {tab.label}
             </a>
@@ -82,6 +83,7 @@ export default function ExpInfo() {
 
         <ExpRating />
       </div>
+      <FloatingButtons/>
     </section>
   );
 }
