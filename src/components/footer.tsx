@@ -41,9 +41,9 @@ export default function Footer() {
         {/* Links 1 */}
         <ul className="space-y-2">
           <li className="hover:underline cursor-pointer">Homepage</li>
-          <li className="hover:underline cursor-pointer">Explore School</li>
+          <li className="hover:underline cursor-pointer">Explore Activity</li>
+          <li className="hover:underline cursor-pointer">Write a Review</li>
           <li className="hover:underline cursor-pointer">About Us</li>
-          <li className="hover:underline cursor-pointer">Contact Us</li>
         </ul>
 
         {/* Links 2 */}
@@ -51,7 +51,7 @@ export default function Footer() {
           <li className="hover:underline cursor-pointer">Privacy Policy</li>
           <li className="hover:underline cursor-pointer">Terms & Condition</li>
           <li className="hover:underline cursor-pointer">Review Writing Guide</li>
-          <li className="hover:underline cursor-pointer">Career/Collaboration</li>
+          <li className="hover:underline cursor-pointer">Career</li>
         </ul>
 
         {/* Social Media */}
