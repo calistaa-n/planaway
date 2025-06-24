@@ -11,7 +11,7 @@ export default function ExpInfo() {
           {[
             { id: "overview", label: "Overview" },
             { id: "location", label: "Location" },
-            { id: "requirement", label: "Requirement" },
+            { id: "requirement", label: "Requisites" },
             { id: "facility", label: "Facility" },
             { id: "pricing", label: "Pricing" },
             { id: "reviews", label: "Reviews" },

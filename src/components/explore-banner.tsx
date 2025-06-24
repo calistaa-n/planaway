@@ -69,13 +69,11 @@ export function ExpBanner() {
             alt="Coral reef"
             className="rounded-2xl w-full h-full object-cover"
           />
-          <div className="relative border-2 rounded-2xl overflow-hidden">
             <img
               src="/explore/palms.png"
               alt="Palm beach"
               className="w-full h-full object-cover"
             />
-          </div>
         </div>
       </div>
     </section>
